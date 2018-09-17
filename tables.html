@@ -1,0 +1,343 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tables</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="./lib/bootstrap-datepicker-master/js/bootstrap-datepicker.js" async></script>
+    <link rel="stylesheet/less" type="text/css" href="styles.less" />
+</head>
+<body>
+    <header>
+        <h4>Report</h4>
+        <div class="head-content">
+            <div class="info-wrapper">
+                <div class="info-data">
+                    <div><strong>Curently viewing data:</strong></div>
+                    <div><span>Mac address:</span><span class="float-right"><strong>AA.BB.CC.DD.AE</strong></span></div>
+                    <div><span>Contract ID:</span><span class="float-right"><strong>3141592654</strong></span></div>
+                    <div><span>City:       </span><span class="float-right"><strong>Budapest</strong></span></div>  
+                </div>    
+            </div>
+            <div class="date-period">
+               <span class="date-select br-left-20 float-left active" data-provide="datepicker">1 Day</span>
+               <span class="date-select br-right-20 float-left "data-provide="datepicker" > 7 Days
+               </span>
+            </div>
+            <div class="reset-filter">
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
+                <a href="index.html">Reset filters</a>
+            </div>  
+            <div class="navigation">
+                <span class="navigation-link active">Tables</span>
+                <span class="navigation-link">Graphs</span>
+            </div>
+        </div>	
+    </header>
+    <div class="">
+        <div class="content-wrapper">
+        <div class="col-md-3">
+            <div class="status-box shadow mb-1 bg-white rounded">
+                <span class="title">
+                    Overall Status
+                </span> 
+                <span  class="badge badge-warning float-right">Medium</span>
+            </div>
+            <div class="status-box shadow mb-1 bg-white rounded">
+                <span class="title">
+                    RSS Status
+                </span> 
+                <span  class="badge badge-danger float-right">Bad</span>
+            </div>
+            <div class="status-box shadow mb-1 bg-white rounded">
+                <span class="title">
+                    Client RSS Status
+                </span> 
+                <span  class="badge badge-warning float-right">Medium</span>
+            </div>
+            <div class="status-box shadow mb-1 bg-white rounded">
+                <span class="title">
+                    Sticky Client Status
+                </span> 
+                <span  class="badge badge-success float-right">Good</span>
+            </div>
+            <div class="status-box shadow mb-1 bg-white rounded">
+                <div>
+                    <span class="sub-title">Interference Status - overall</span> 
+                    <span  class="badge badge-warning float-right">Medium</span>
+                </div> 
+                <div>
+                    <span class="sub-title">Interference Status Co- Channel</span> 
+                    <span  class="badge badge-success float-right">Good</span>
+                </div>
+                <div>
+                    <span class="sub-title">Interference Status Adjacent</span> 
+                    <span  class="badge badge-danger float-right">Bad</span>
+                </div>   
+            </div>
+            <div class="status-box shadow mb-1 bg-white rounded clearfix">
+                <div class="title">HGw Interference</div>
+                <span class="float-left">
+                    <span>UniFi</span><span  class="badge badge-success mrg-l-10">Good</span>
+                </span>
+                <span class="float-right">
+                    <span>Home</span><span  class="badge badge-warning mrg-l-10">Medium</span>
+                </span>
+            </div>
+            <div class="status-box shadow mb-1 bg-white rounded">
+                <span class="title">Retransmission Status</span><span class="badge badge-danger float-right mrg-t-7">Bad</span>
+                <div>
+                    <span>HGw Number of retransmission</span>
+                    <span class="float-right">5515</span>
+                </div>
+            </div>
+            <div class="status-box shadow mb-1 bg-white rounded">
+                <span>Total Number of Clients</span><span class="float-right">120</span>
+                <div>
+                    <span>Max Number of Concurent Clients</span>
+                    <span class="float-right">10</span>
+                </div>
+            </div>
+            <div class="status-box shadow mb-1 bg-white rounded">
+                <div class="title">
+                    HGw Combined status 
+                </div> 
+                <div>
+                    <span>HGw Number of clients</span> 
+                    <span class="float-right">15</span>
+                </div>
+                <div>
+                    <span>HGw number of sicky clients</span> 
+                    <span class="float-right">10</span>
+                </div>
+                <div>
+                    <span>Data transfer [GB]</span> 
+                    <span class="float-right">5.7</span>
+                </div>   
+            </div>
+        </div>
+        <div class="col-md-3">
+            <table style="width:100%" class="shadow mb-1 bg-white rounded">
+                    <th>HGw Bitrate [Mbps]</th>
+                    <tr>
+                      <td>KPI Name</td>
+                      <td>Min</td> 
+                      <td>Avg</td>
+                      <td>Max</td>
+                      <td>Last</td>
+                    </tr>
+                    <tr>
+                      <td>Bitrate</td>
+                      <td>15</td> 
+                      <td class="selected-value">15</td>
+                      <td>15</td>
+                      <td>15</td>
+                    </tr>
+                  </table>
+                  <div class="status-box shadow mb-1 bg-white rounded">
+                        HGw total traffic [GB]  
+                        <span class="float-right" >5.7</span>
+                  </div>
+                  <table style="width:100%" class="shadow mb-1 bg-white rounded">
+                        <tr>
+                          <th>HGw RSS</th>
+                        </tr>
+                        <tr>
+                          <td>KPI Name</td>
+                          <td>Min</td> 
+                          <td>Avg</td>
+                          <td>Max</td>
+                          <td>Last</td>
+                        </tr>
+                        <tr>
+                          <td>RSS[dBM]</td>
+                          <td>-40</td> 
+                          <td  class="selected-value">-35</td>
+                          <td>-30</td>
+                          <td>-32</td>
+                        </tr>
+                      </table>
+                      <table style="width:100%" class="shadow mb-1 bg-white rounded">
+                            <tr>
+                              <th>HGw Interference network RSS</th>
+                            </tr>
+                            <tr>
+                              <td>KPI Name</td>
+                              <td>Avg</td> 
+                              <td>Max</td>
+                              <td>Last</td>
+                            </tr>
+                            <tr>
+                              <td>RSS [dBm]</td>
+                              <td>-42</td> 
+                              <td>-35</td>
+                              <td>-40</td>
+                            </tr>
+                          </table>
+        </div>
+        <div class="col-md-2">
+            <div class="single-chart-wrapper shadow mb-1 bg-white rounded">
+                <h6>WiFi connected time</h6>
+                <div class="single-chart-text">
+                    <span>Percent of time with connected user</span>
+                </div>
+                <div class="single-chart-container">
+                    <div id="chr1" class="single-chart"></div>
+                </div>   
+            </div>
+            <div class="single-chart-wrapper shadow mb-1 bg-white rounded">
+                <h6>WiFi connected time</h6>
+                <div class="single-chart-text">
+                    <span>Percent of time with connected user</span>
+                </div>
+                <div  class="single-chart-container">
+                    <div id="chr2" class="single-chart"></div>
+                </div>   
+            </div>
+            <div class="single-chart-wrapper shadow mb-1 bg-white rounded">
+                <h6>WiFi connected time</h6>
+                <div class="single-chart-text">
+                    <span>Percent of time with connected user</span>
+                </div>
+                <div class="single-chart-container">
+                    <div id="chr3" class="single-chart"></div>
+                </div>   
+            </div>
+            <div class="single-chart-wrapper shadow mb-1 bg-white rounded">
+                <h6>WiFi connected time</h6>
+                <div class="single-chart-text">
+                    <span>Percent of time with connected user</span>
+                </div>
+                <div class="single-chart-container">
+                    <div id="chr4" class="single-chart"></div>
+                </div>   
+            </div> 
+        </div>
+        <div class="col-md-2">
+            <div class="single-chart-wrapper shadow mb-1 bg-white rounded">
+                <h6>WiFi connected time</h6>
+                <div class="single-chart-text">
+                    <span>Percent of time with connected user</span>
+                </div>
+                <div class="single-chart-container">
+                    <div id="chr1" class="single-chart"></div>
+                </div>   
+            </div>
+            <div class="single-chart-wrapper shadow mb-1 bg-white rounded">
+                <h6>WiFi connected time</h6>
+                <div class="single-chart-text">
+                    <span>Percent of time with connected user</span>
+                </div>
+                <div  class="single-chart-container">
+                    <div id="chr2" class="single-chart"></div>
+                </div>   
+            </div>
+            <div class="single-chart-wrapper shadow mb-1 bg-white rounded">
+                <h6>WiFi connected time</h6>
+                <div class="single-chart-text">
+                    <span>Percent of time with connected user</span>
+                </div>
+                <div class="single-chart-container">
+                    <div id="chr3" class="single-chart"></div>
+                </div>   
+            </div>
+            <div class="single-chart-wrapper shadow mb-1 bg-white rounded">
+                <h6>WiFi connected time</h6>
+                <div class="single-chart-text">
+                    <span>Percent of time with connected user</span>
+                </div>
+                <div class="single-chart-container">
+                    <div id="chr4" class="single-chart"></div>
+                </div>   
+            </div> 
+        </div>
+        <div class="col-md-2">
+                <aside id="sidebar" class="shadow rounded">
+                        <div class="">
+                            <h4 class="text-center">HGw Info</h4>
+                            <div><span>wifi enabled:</span><span class="float-right">Yes</span></div>
+                            <div><span>HGW standard:</span><span class="float-right">802.11b</span></div>
+                            <div><span>IP Adress:</span><span class="float-right">192.168.1.1</span></div>
+                            <div><span>Mac:</span><span class="float-right">AA:BB:XX:DD:GG</span></div>
+                            <div><span>Contract No.:</span><span class="float-right">22010101010</span></div>
+                            <div><span>wifi enabled:</span><span class="float-right">yes</span></div>
+                            <div><span>Auto channel enabled:</span><span class="float-right">Yes</span></div>
+                            <div><span>wifi enabled:</span><span class="float-right">yes</span></div>
+                            <div><span>SSID:</span><span class="float-right">Ibis-wifi</span></div>
+                            <div><span>Channel:</span><span class="float-right">6</span></div>
+                            <div><span>Security:</span><span class="float-right">WPA/WPA2-PSK</span></div>
+                            <div><span>Band:</span><span class="float-right">2,4GHz</span></div>
+                            <div><span>Hiden SSID:</span><span class="float-right">No</span></div>
+                            <div><span>Bandwith:</span><span class="float-right">22MHZ</span></div>
+                            <div><span>Up time: </span><span class="float-right">(35369)2days,19:04:10</span></div>
+                            <div><span>Equipment:</span><span class="float-right">ABC</span></div>
+                            <div><span>Description:</span><span class="float-right">modem</span></div>
+                            <div><span>CMTSID:</span><span class="float-right">BG-C-1-IBIS</span></div>
+                            <div><span>Firmware:</span><span class="float-right">2.2.1004.76</span></div>
+                        </div>
+                    </aside>
+        </div>
+        
+        
+<script>    
+var charData = {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: 0,
+        plotShadow: false
+    },
+    title: {
+        text: '49%',
+        align: 'center',
+        verticalAlign: 'middle',
+        y: 0
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            dataLabels: {
+                enabled: true,
+                distance: -50,
+                style: {
+                    fontWeight: 'bold',
+                    color: 'white'
+                }
+            },
+            startAngle: -120,
+            endAngle: 240,
+            center: ['50%', '50%']
+        }
+    },
+    series: [{
+        type: 'pie',
+        name: '',
+        innerSize: '50%',
+        data: [
+            ['', 46.0],
+            ['', 36.0],
+            
+            ['', 18.0],
+            
+        ]
+    }]
+};
+
+Highcharts.chart('chr1', charData);
+Highcharts.chart('chr2', charData);
+Highcharts.chart('chr3', charData);
+Highcharts.chart('chr4', charData);
+        </script>
+    </div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>    
+</body>
+</html>

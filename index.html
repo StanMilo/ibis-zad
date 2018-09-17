@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title>Report</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="./lib/autocomplete/awesomplete.css" /> 
+	<script src="./lib/autocomplete/awesomplete.js" async></script>
+	<link rel="stylesheet" type="text/css" href="style/main.css">
+</head>
+<body>
+	<header>
+        <h4>Report</h4>
+        <div class="head-content">
+            <div class="info-wrapper">
+                <form id="filter-form" action="tables.html">	
+					<div class="form-row align-items-center">
+						<div class="col-auto pill-round">
+							<label class="sr-only" id="mac-address" for="inlineFormInput">Mac: address</label>
+							<input type="text" name="mac-id" class="form-control mb-2" id="mac-id" placeholder="Mac: adress">
+						</div>
+						<div class="col-auto pill-round">
+							<label class="sr-only" for="inlineFormInput">Contract ID</label>
+							<input type="text"  name="contract-id" class="form-control mb-2 awesomplete" autocomplete="on" id="contract-id" placeholder="Contract ID" required>
+						</div>
+					
+						<div class="col-auto pill-round">
+							<button type="submit" class="btn btn-primary mb-2">Apply filters</button>
+							<!-- onclick="location.href = 'graphs.html'" -->
+						</div>
+					</div>
+				</form>
+            </div>
+            <div class="navigation">
+                <span class="navigation-link"><a href="tables.html">Tables</a></span>
+                <span class="navigation-link"><a href="graphs.html">Graphs</a></span>
+            </div>
+        </div>	
+    </header>
+
+   
+    
+<script src="./app.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>

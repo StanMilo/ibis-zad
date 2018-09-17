@@ -1,0 +1,259 @@
+body {
+    font-size: 12px;
+    background-color: #00000005;
+}
+
+a {
+    color: black;;
+}
+
+header {
+    border-bottom: 1px solid #000;
+    background-color: #0000000d;
+}
+
+header h4, header .head-content {
+    padding: 7px 20px;
+}
+
+.head-content {
+    widows: 100%;
+    height: 125px;
+    position: relative;
+    border-top: 1px solid black;
+}
+
+.head-content .info-wrapper{
+    height: 87%;
+}
+
+.head-conten .navigation{
+  
+}
+
+.navigation-link {
+    padding: 5px 40px;
+    width: 85px;
+    margin-right: 10px;
+    text-align: center;
+ 
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 5px solid #00dcff !important;
+}
+
+.navigation-link.active{
+    background-color: fff;
+    border-bottom: 1px solid #fff;
+}
+
+header .info-data {
+    background-color: fff;
+    display:inline;
+    position: absolute;
+    padding: 5px 10px;
+    font-size: 10px;
+    width: 190px;
+    top: 6px;
+}
+
+.date-period{
+    position: absolute;
+    top: 30%;
+    left: 41%;
+}
+
+.br-left-20 {
+    border-top-left-radius: 20px 20px;
+    border-bottom-left-radius: 20px 20px;
+}
+
+.br-right-20 {
+    border-top-right-radius: 20px 20px;
+    border-bottom-right-radius: 20px 20px;
+}
+
+.date-period .date-select{
+    padding: 2px 50px;
+    color: black;
+    border: 2px solid #020244;
+    cursor:pointer;
+}
+
+.date-period  .active {
+    background-color: #020244;
+    color: #fff;
+}
+
+.reset-filter{
+    position: absolute;
+    top: 30%;
+    right: 20px;
+    border-radius: 20px;
+    border: 1px solid black;
+    padding:3px 30px;
+    cursor: pointer;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+.highcharts-button-symbol{
+    display: none !important;
+}
+
+.highcharts-credits{
+    display: none !important;
+}
+
+
+.single-chart{
+    min-width: 135px !important; 
+    height: 230px !important; 
+    max-width: 280px !important; 
+    max-height: 120px !important;
+    margin: 0 auto;
+    
+    position: absolute;
+    right: -22px;
+    top: -20px;
+}
+
+.single-chart-wrapper{
+    height: 150px;
+}
+
+.single-chart-text{
+    position: absolute;
+    left: 26px;
+    top: 70px;
+    z-index: 10;
+    width: 120px;
+}
+
+.single-chart-container{
+    position: relative;
+}
+
+
+
+h6 {
+    padding:10px;
+}
+
+h4, h5, h6, th, .title, .sub-title {
+    color: #020244;
+}
+
+.content-wrapper{
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: 70px;
+    padding: 0px 10px;
+}
+
+.content-wrapper .col-md-3, .content-wrapper .col-md-2{
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+#sidebar {
+    background-color: #fff;
+    padding: 5px;
+}
+
+.status-box {
+    padding: 5px 5px 5px 10px;
+}
+
+.content-wrapper th, .content-wrapper td{
+    padding:5px 5px 5px 10px !important;
+
+}
+
+tr:nth-child(3) {
+    background:#00000014;
+}
+
+.selected-value {
+    color:red;
+}
+
+.content-wrapper .badge{
+    width: 70px;
+    margin-top:6px;
+}
+
+.status-box .title{
+    font-size:16px;
+    font-weight: bold;
+}
+
+.status-box .sub-title{
+    font-size:14px;
+    font-weight: bold;
+}
+
+.mrg-l-10 {
+    margin-left: 10px;
+}
+
+.mrg-t-7{
+    margin-top: 7px;
+}
+
+
+#single-graph3, #single-graph4 {
+    height: 300px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+/* Charts */
+.highcharts-color-0 {
+fill: #7cb5ec;
+    stroke: #7cb5ec;
+}
+.highcharts-axis.highcharts-color-0 .highcharts-axis-line {
+        stroke: #7cb5ec;
+}
+.highcharts-axis.highcharts-color-0 text {
+    fill: #7cb5ec;
+}
+.highcharts-color-1 {
+fill: #90ed7d;
+    stroke: #90ed7d;
+}
+.highcharts-axis.highcharts-color-1 .highcharts-axis-line {
+    stroke: #90ed7d;
+}
+.highcharts-axis.highcharts-color-1 text {
+    fill: #90ed7d;
+}
+
+.highcharts-yaxis .highcharts-axis-line {
+    stroke-width: 2px;
+}
+
+.pill-round .awesomplete, .pill-round input, .pill-round button {
+    border-radius: 20px;
+}
+
+.pill-round  button {
+    background-color: #00dcff;
+    color:black;
+    border: none;
+}
